@@ -21,7 +21,7 @@ $color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
   text-decoration: none;
   text-align: center;
   
-  &.primary {
+  &-primary {
     color: $color-btn-primary-text;
     background-color: $color-btn-primary-background;
     &:hover {
@@ -29,7 +29,7 @@ $color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
       background-color: $color-btn-primary-background-dark;
     }
   }
-  &.danger {
+  &-danger {
     color: $color-btn-danger-text;
     background-color: $color-btn-danger-background;
     &:hover {
@@ -37,15 +37,14 @@ $color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
       background-color: $color-btn-danger-background-dark;
     }
   }
-}
-
-.btn-row {
-  display: flex;
-  align-items: flex-start;
-  > * {
-    margin-left: 1rem;
-    &:first-child {
-      margin-left: 0;
+  &-row {
+    display: flex;
+    align-items: flex-start;
+    > * {
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }

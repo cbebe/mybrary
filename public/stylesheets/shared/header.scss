@@ -7,38 +7,39 @@ $nav-link-font-weight: 300;
   --nav-link-font-weight: 300;
 }
 
-.header-title {
-  color: var(--color-text-light);
-  text-decoration: none;
-  font-size: $nav-title-font-size;
-  font-weight: $nav-title-font-weight;
-  &:hover {
-    color: white;
+.header {
+  &-title {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: $nav-title-font-size;
+    font-weight: $nav-title-font-weight;
+    &:hover {
+      color: white;
+    }
   }
-}
-
-.header-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5rem;
-  
-  ul {
+  &-nav {
     display: flex;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-    a {
-      color: var(--color-text-light);
-      text-decoration: none;
-      font-weight: $nav-link-font-weight;
-      padding: 1rem;
-      &:hover {
-        color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      list-style: none;
+      a {
+        color: var(--color-text-light);
+        text-decoration: none;
+        font-weight: $nav-link-font-weight;
+        padding: 1rem;
+        &:hover {
+          color: white;
+        }
       }
     }
   }

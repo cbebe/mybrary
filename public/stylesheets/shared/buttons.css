@@ -10,22 +10,22 @@
   text-align: center;
 }
 
-.btn.primary {
+.btn-primary {
   color: hsl(var(--color-base-hue), 100%, 20%);
   background-color: hsl(var(--color-base-hue), 100%, 83%);
 }
 
-.btn.primary:hover {
+.btn-primary:hover {
   color: hsl(var(--color-base-hue), 100%, 10%);
   background-color: hsl(var(--color-base-hue), 100%, 73%);
 }
 
-.btn.danger {
+.btn-danger {
   color: black;
   background-color: hsl(var(--color-danger-hue), 100%, 83%);
 }
 
-.btn.danger:hover {
+.btn-danger:hover {
   color: black;
   background-color: hsl(var(--color-danger-hue), 100%, 73%);
 }
