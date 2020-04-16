@@ -1,0 +1,17 @@
+@import url(c:\Users\maple\Desktop\WD\mybrary\public\stylesheets\shared\variables.css);
+.btn {
+  border: 1px solid black;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Gotham Rounded';
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn.primary {
+  color: hsl(var(--color-base-hue), 100%, 20%);
+  background-color: hsl(var(--color-base-hue), 100%, 83%);
+}
+/*# sourceMappingURL=buttons.css.map */

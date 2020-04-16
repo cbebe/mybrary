@@ -1,0 +1,21 @@
+@import 'variables.css';
+
+$color-btn-border: black;
+
+$color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
+$color-btn-primary-background: hsl(var(--color-base-hue), 100%, 83%);
+.btn {
+  border: 1px solid $color-btn-border;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Gotham Rounded';
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  
+  &.primary {
+    color: $color-btn-primary-text;
+    background-color: $color-btn-primary-background;
+  }
+}
