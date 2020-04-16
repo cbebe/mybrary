@@ -14,4 +14,36 @@
   color: hsl(var(--color-base-hue), 100%, 20%);
   background-color: hsl(var(--color-base-hue), 100%, 83%);
 }
+
+.btn.primary:hover {
+  color: hsl(var(--color-base-hue), 100%, 10%);
+  background-color: hsl(var(--color-base-hue), 100%, 73%);
+}
+
+.btn.danger {
+  color: black;
+  background-color: hsl(var(--color-danger-hue), 100%, 83%);
+}
+
+.btn.danger:hover {
+  color: black;
+  background-color: hsl(var(--color-danger-hue), 100%, 73%);
+}
+
+.btn-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.btn-row > * {
+  margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+  margin-left: 0;
+}
 /*# sourceMappingURL=buttons.css.map */
