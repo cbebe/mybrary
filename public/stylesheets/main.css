@@ -81,7 +81,7 @@
   color: white;
 }
 
-.btn {
+.btn-primary {
   border: 1px solid black;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -90,9 +90,6 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-}
-
-.btn-primary {
   color: #004466;
   background-color: #a8e2ff;
 }
@@ -103,6 +100,14 @@
 }
 
 .btn-danger {
+  border: 1px solid black;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Gotham Rounded';
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
   color: black;
   background-color: #ffc5a8;
 }
@@ -129,7 +134,7 @@
   margin-left: 0;
 }
 
-.form-row {
+.form-row, .form-row-end {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +167,7 @@
   margin-left: 0;
 }
 
-.form-item-no-grow {
+.form-item.no-grow {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;

@@ -3,10 +3,10 @@
   <div>
     <img class="book-cover" src="<%= book.coverImagePath %>">
     <div class="book-details-btn-grid">
-      <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
+      <a class="btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
       <%- include('../partials/deleteForm', 
                   { url: `/books/${book.id}` }) %> 
-      <a class="btn btn-primary book-details-author-btn" href="/authors/<%= book.author.id %>">View Author</a>
+      <a class="btn-primary book-details-author-btn" href="/authors/<%= book.author.id %>">View Author</a>
     </div>
   </div>
   <div class="book-details-grid">

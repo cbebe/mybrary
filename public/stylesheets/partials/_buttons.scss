@@ -1,4 +1,4 @@
-.btn {
+@mixin base-btn {
   border: 1px solid $color-btn-border;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -7,8 +7,11 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  
+}
+
+.btn {
   &-primary {
+    @include base-btn;
     color: $color-btn-primary-text;
     background-color: $color-btn-primary-background;
     &:hover {
@@ -17,6 +20,7 @@
     }
   }
   &-danger {
+    @include base-btn;
     color: $color-btn-danger-text;
     background-color: $color-btn-danger-background;
     &:hover {
