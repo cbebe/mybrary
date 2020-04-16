@@ -1,0 +1,40 @@
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/header";
+@import "partials/buttons";
+@import "partials/form";
+@import "partials/author";
+@import "partials/book";
+
+:root {
+  font-family: 'Gotham Rounded';
+  font-size: 20px;
+  color: $color-text-light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, $color-background-dark, $color-background-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.inner-container {
+  margin: 0 2rem;
+}
+
+.page-header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.error-message {
+  color: $color-error-text;
+}

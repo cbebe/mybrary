@@ -1,23 +1,327 @@
-@import 'shared/variables.css';
-@import 'shared/header.css';
-@import 'shared/fonts.css';
-@import 'shared/buttons.css';
-@import 'shared/form.css';
-@import 'shared/author.css';
-@import 'shared/book.css';
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url("/fonts/GothamRounded-Bold.woff2") format("woff2"), url("/fonts/GothamRounded-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url("/fonts/GothamRounded-Medium.woff2") format("woff2"), url("/fonts/GothamRounded-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url("/fonts/GothamRounded-Light.woff2") format("woff2"), url("/fonts/GothamRounded-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded Book';
+  src: url("/fonts/GothamRounded-Book.woff2") format("woff2"), url("/fonts/GothamRounded-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --nav-title-font-size: 3rem;
+  --nav-title-font-weight: bold;
+  --nav-link-font-weight: 300;
+}
+
+.header-title {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.header-title:hover {
+  color: white;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li {
+  list-style: none;
+}
+
+.header-nav li a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 300;
+  padding: 1rem;
+}
+
+.header-nav li a:hover {
+  color: white;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Gotham Rounded';
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  color: #004466;
+  background-color: #a8e2ff;
+}
+
+.btn-primary:hover {
+  color: #002233;
+  background-color: #75d1ff;
+}
+
+.btn-danger {
+  color: black;
+  background-color: #ffc5a8;
+}
+
+.btn-danger:hover {
+  color: black;
+  background-color: #ffa375;
+}
+
+.btn-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.btn-row > * {
+  margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+  margin-left: 0;
+}
+
+.form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .5rem;
+}
+
+.form-row-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
+.form-item:first-child {
+  margin-left: 0;
+}
+
+.form-item-no-grow {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.form-item > label {
+  font-size: 1.2rem;
+  margin-bottom: .25rem;
+  margin-left: .25rem;
+}
+
+.form-item input, .form-item select, .form-item textarea {
+  height: 2rem;
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+  border: 1px solid #00aaff;
+  background-color: #00699e;
+  color: #bde9ff;
+  font-weight: normal;
+  font-family: 'Gotham Rounded';
+  outline: none;
+}
+
+.form-item input:focus, .form-item select:focus, .form-item textarea:focus {
+  border-color: #99ddff;
+}
+
+.form-item textarea {
+  height: 100%;
+  resize: none;
+}
+
+.form-item select option {
+  background-color: black;
+}
+
+.filepond--root {
+  font-family: 'Gotham Rounded';
+  margin-bottom: 0;
+}
+
+.filepond--panel-root {
+  background-color: #00699e;
+  border: 1px solid #00aaff;
+}
+
+.filepond--drop-label {
+  color: #bde9ff;
+  font-size: inherit;
+}
+
+.author-name {
+  font-size: 1.5rem;
+}
+
+.author-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --book-cover-width: 200px;
+  --book-cover-width-large: 325px;
+  --book-cover-aspect-ratio: 0.75;
+}
+
+.book-grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2rem;
+  -ms-grid-columns: (var(--book-cover-width))[auto-fill];
+      grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+}
+
+.book-grid-large {
+  -ms-grid-columns: (var(--book-cover-width-large))[auto-fill];
+      grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
+
+.book-cover {
+  width: var(--book-cover-width);
+  height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+}
+
+.book-cover-large {
+  --book-cover-width: var(--book-cover-width-large);
+}
+
+.book-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.book-details-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.book-details-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1rem;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.book-details-btn-grid {
+  display: -ms-grid;
+  display: grid;
+  justify-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+      grid-template-areas: "edit delete" "author author";
+  grid-gap: .5rem;
+  margin-top: .5rem;
+}
+
+.book-details-author-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: author;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
 
 :root {
   font-family: 'Gotham Rounded';
   font-size: 20px;
-  color: var(--color-text-light);
+  color: #bde9ff;
 }
 
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+  background: -webkit-gradient(linear, left top, right top, from(#001b29), to(#003652));
+  background: linear-gradient(to right, #001b29, #003652);
 }
 
 .container {
@@ -36,5 +340,6 @@ body {
 }
 
 .error-message {
-  color: hsl(var(--color-danger-hue), 100%, 50%);
+  color: #ff5500;
 }
+/*# sourceMappingURL=main.css.map */

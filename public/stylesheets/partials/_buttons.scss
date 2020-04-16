@@ -1,16 +1,3 @@
-@import 'variables.css';
-
-$color-btn-border: black;
-
-$color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
-$color-btn-danger-text: hsl(var(--color-danger-hue), 100%, 20%);
-$color-btn-primary-text-dark: hsl(var(--color-base-hue), 100%, 10%);
-$color-btn-danger-text: black;
-$color-btn-danger-text-dark: black;
-$color-btn-primary-background: hsl(var(--color-base-hue), 100%, 83%);
-$color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 83%);
-$color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 73%);
-$color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
 .btn {
   border: 1px solid $color-btn-border;
   border-radius: .5rem;

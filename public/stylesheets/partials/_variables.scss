@@ -1,0 +1,34 @@
+// function to convert to hsl
+// because typing 100% every time is bad??
+@function hslConv($color-hue, $lightness) {
+  @return hsl($color-hue, 100%, $lightness);
+}
+
+// hues for colours
+$base-hue: 200;
+$danger-hue-offset: 180;
+$danger-hue: $base-hue - $danger-hue-offset;
+
+
+$color-background-dark: hslConv($base-hue, 8%);
+$color-background-light: hslConv($base-hue, 16%);
+$color-text-light: hslConv($base-hue, 87%);
+
+$color-btn-border: black;
+$color-btn-primary-text: hslConv($base-hue, 20%);
+$color-btn-primary-text-dark: hslConv($base-hue, 10%);
+$color-btn-primary-background: hslConv($base-hue, 83%);
+$color-btn-primary-background-dark: hslConv($base-hue, 73%);
+
+$color-btn-danger-text: black;
+$color-btn-danger-text-dark: black;
+$color-btn-danger-background: hslConv($danger-hue, 83%);
+$color-btn-danger-background-dark: hslConv($danger-hue, 73%);
+
+
+$form-label-font-size: 1.2rem;
+$form-input-background-color: hslConv($base-hue, 31%);
+$form-input-border-color: hslConv($base-hue, 50%);
+$form-input-border-color-light: hslConv($base-hue, 80%);
+
+$color-error-text: hslConv($danger-hue, 50%);
