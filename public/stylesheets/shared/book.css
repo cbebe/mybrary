@@ -1,0 +1,80 @@
+:root {
+  --book-cover-width: 200px;
+  --book-cover-width-large: 325px;
+  --book-cover-aspect-ratio: 0.75;
+}
+
+.book-grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2rem;
+  -ms-grid-columns: (var(--book-cover-width))[auto-fill];
+      grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+}
+
+.book-grid-large {
+  -ms-grid-columns: (var(--book-cover-width-large))[auto-fill];
+      grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
+
+.book-cover {
+  width: var(--book-cover-width);
+  height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+}
+
+.book-cover-large {
+  --book-cover-width: var(--book-cover-width-large);
+}
+
+.book-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.book-details-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.book-details-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1rem;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.book-details-btn-grid {
+  display: -ms-grid;
+  display: grid;
+  justify-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+      grid-template-areas: "edit delete" "author author";
+  grid-gap: .5rem;
+  margin-top: .5rem;
+}
+
+.book-details-author-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: author;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
+/*# sourceMappingURL=book.css.map */
